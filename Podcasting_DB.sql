@@ -228,7 +228,7 @@ SELECT duration from  RECORDED
 where Audio_ID=1;
 
 
--- get no_of-subscriptions
+-- get no_of_subscriptions
 SELECT *FROM Subscribe;
 select Subscribe.User_ID, count(Subscribe.Channel_ID)  as Number_of_Subscriptions from Subscribe
 join Users 
@@ -243,22 +243,20 @@ WHERE First_name='Nahla';
 select *from Users;
 
 
---delete an audio from Library_has_audio where (,) then Update Library.Number_of_Audios /select from both tables
-select * from Library_has_audio;
-select * from Library;
+--delete an audio from Library_has_audio , then Update Library.Number_of_Audios ,select from both tables
+
 DELETE FROM Library_has_audio
 WHERE Audio_ID=1 AND  Library_ID=3
+
 UPDATE Library
 set Number_of_Audios=Number_of_Audios-1
 WHERE Library_ID=3;
+
 select * from Library_has_audio;
 select * from Library;
 
 
---update channel_id of 1 -> channel_id of 3
-select *from Channel;
-select *from Subscribe;
-select *from Audio;
+--update channel_id of 1 -> channel_id of 3 , then view related tables
 update Channel
 set Channel_ID=3
 where Channel_ID=1;
@@ -267,9 +265,7 @@ select *from Subscribe;
 select *from Audio;
 
 
---update Library_id of 3 ->  Library_id of 5
-select * from Library;
-select * from Library_has_audio;
+--update Library_id of 3 ->  Library_id of 5 , then view related tables
 update  Library
 set Library_ID=5
 WHERE Library_ID=3;
@@ -278,18 +274,13 @@ select * from Library_has_audio;
 
 
 
---delete Library_id of 5
-select * from Library_has_audio;
-select * from Library;
+--delete Library_id of 5,then view related tables
 DELETE FROM Library
 WHERE Library_ID=5;
 select * from Library_has_audio;
 select * from Library;
 
---delete channel_id of 3
-select *from Channel;
-select *from Subscribe;
-select *from Audio;
+--delete channel_id of 3 , then view related tables
 DELETE FROM Channel
 WHERE Channel_ID=3;
 select *from Channel;
