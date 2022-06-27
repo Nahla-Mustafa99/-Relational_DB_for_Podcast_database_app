@@ -1,4 +1,4 @@
-# -Relational_DB_for_Podcast_database_app
+# Relational_DB_for_Podcast_database_app
 implementing a simulation of data that can be in database of podcast application.
 
 # Requirements
